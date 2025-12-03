@@ -15,11 +15,19 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+nav {
+  display: flex;
+  flex-wrap: wrap;     /* 横幅に収まらないと折り返す */
+  gap: 20px;
+}
+
 nav a {
-  margin-left: 15px;
+  margin-left: 0;      /* gap を使うから不要 */
   text-decoration: none;
   color: #333;
+  font-size: 15px;     /* 少し小さめに */
 }
+
 
 .hero {
   height: 70vh;
