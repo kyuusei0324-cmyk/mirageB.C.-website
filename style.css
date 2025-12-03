@@ -4,28 +4,34 @@ body {
   line-height: 1.6;
 }
 
+/* ヘッダー */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   background: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 10px 20px;
+  padding: 10px 20px 15px;
+  z-index: 1000;
 }
 
-/* ロゴとナビを縦に並べる */
 header .inner {
   display: flex;
-  flex-direction: column; /* ← 縦並び */
-  align-items: center;    /* 中央寄せ */
-  gap: 8px;               /* ロゴとの間隔 */
+  flex-direction: column; 
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
 }
 
 nav {
   display: flex;
-  flex-wrap: wrap;        /* ← ここで折り返し可能に */
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
-  justify-content: center; /* 中央に寄せる */
 }
 
 nav a {
@@ -34,8 +40,7 @@ nav a {
   font-size: 15px;
 }
 
-
-
+/* トップ画像 */
 .hero {
   height: 70vh;
   background: url("top.jpg") center/cover no-repeat;
@@ -45,19 +50,22 @@ nav a {
   justify-content: center;
   align-items: center;
   text-shadow: 0 0 10px rgba(0,0,0,0.7);
-  margin-top: 60px;
+  margin-top: 120px;  /* ← header分の余白 */
 }
 
+/* セクション */
 .section {
   padding: 60px 20px;
   max-width: 900px;
   margin: auto;
 }
 
+/* メンバー紹介 */
 .member-list {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .member {
@@ -70,6 +78,7 @@ nav a {
   border-radius: 50%;
 }
 
+/* テーブル */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -79,12 +88,6 @@ th, td {
   border: 1px solid #ccc;
   padding: 8px;
   text-align: center;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #eee;
 }
 
 /* イベント紹介 */
@@ -124,4 +127,22 @@ footer {
 .event-card .desc {
   font-size: 14px;
   color: #555;
+}
+
+/* SNSリンク */
+.sns {
+  font-size: 17px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.sns:hover {
+  text-decoration: underline;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #eee;
 }
