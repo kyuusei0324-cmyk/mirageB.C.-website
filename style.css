@@ -43,7 +43,7 @@ nav a {
 /* トップ画像 */
 .hero {
   height: 70vh;
-  background: url("top.jpg") center/cover no-repeat;
+  background: url("image.png") center/cover no-repeat;
   color: white;
   display: flex;
   flex-direction: column;
